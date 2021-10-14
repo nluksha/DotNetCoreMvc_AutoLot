@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DotNetCoreMvc_AutoLot", "DotNetCoreMvc_AutoLot\DotNetCoreMvc_AutoLot.csproj", "{E6FE78BC-FB1B-420E-8650-E42CBF60C60B}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore_AutoLotDAL.Models", "DotNetCore_AutoLotDAL.Models\DotNetCore_AutoLotDAL.Models.csproj", "{A4CF2FF8-221A-432C-BC87-766F1737A647}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetCore_AutoLotDAL", "DotNetCore_AutoLotDAL\DotNetCore_AutoLotDAL.csproj", "{B915ACA8-F212-4B5E-97C7-17C4A79BC351}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{E6FE78BC-FB1B-420E-8650-E42CBF60C60B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E6FE78BC-FB1B-420E-8650-E42CBF60C60B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E6FE78BC-FB1B-420E-8650-E42CBF60C60B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A4CF2FF8-221A-432C-BC87-766F1737A647}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A4CF2FF8-221A-432C-BC87-766F1737A647}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A4CF2FF8-221A-432C-BC87-766F1737A647}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A4CF2FF8-221A-432C-BC87-766F1737A647}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B915ACA8-F212-4B5E-97C7-17C4A79BC351}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B915ACA8-F212-4B5E-97C7-17C4A79BC351}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B915ACA8-F212-4B5E-97C7-17C4A79BC351}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B915ACA8-F212-4B5E-97C7-17C4A79BC351}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
