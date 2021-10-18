@@ -11,7 +11,7 @@ using DotNetCore_AutoLotDAL.DataInitialization;
 using DotNetCore_AutoLotDAL.EF;
 using Microsoft.Extensions.DependencyInjection;
 
-namespace DotNetCoreMvc_AutoLot
+namespace DotNetCoreMvc_AutoLotSite
 {
     public class Program
     {

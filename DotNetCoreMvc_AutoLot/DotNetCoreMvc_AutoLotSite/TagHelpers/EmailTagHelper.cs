@@ -5,7 +5,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 
-namespace DotNetCoreMvc_AutoLot.TagHelpers
+namespace DotNetCoreMvc_AutoLotSite.TagHelpers
 {
     public class EmailTagHelper: TagHelper
     {
