@@ -14,8 +14,7 @@ namespace DotNetCore_AutoLotDAL.EF
         public DbSet<Inventory> Cars { get; set; }
         public DbSet<Order> Orders { get; set; }
 
-        // TODO: it must be internal
-        public AutoLotContext()
+        internal AutoLotContext()
         {
         }
 

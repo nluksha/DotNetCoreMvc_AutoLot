@@ -9,6 +9,10 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using DotNetCore_AutoLotDAL.EF;
+using DotNetCore_AutoLotDAL.Repos;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Diagnostics;
 
 namespace DotNetCoreMvc_AutoLot
 {
@@ -33,6 +37,14 @@ namespace DotNetCoreMvc_AutoLot
 
 
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            services.AddDbContextPool<AutoLotContext>(options =>
+                options
+                .UseSqlServer(Configuration.GetConnectionString("AutoLot"), o => o.EnableRetryOnFailure())
+                .ConfigureWarnings(warning => warning.Throw(RelationalEventId.QueryClientEvaluationWarning))
+            );
+
+            services.AddScoped<IInventoryRepo, InventoryRepo>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,7 +64,12 @@ namespace DotNetCoreMvc_AutoLot
             app.UseStaticFiles();
             app.UseCookiePolicy();
 
-            app.UseMvc();
+            app.UseMvc( routes =>
+            {
+                routes.MapRoute("Contact", "Contact/{*pathInfo}", new { controller = "Home", action = "Contact" });
+                routes.MapRoute("About", "About/{*pathInfo}", new { controller = "Home", action = "About" });
+                routes.MapRoute(name: "default", template: "{controller=Home}/{action=Index}/{id?}");
+            });
         }
     }
 }
