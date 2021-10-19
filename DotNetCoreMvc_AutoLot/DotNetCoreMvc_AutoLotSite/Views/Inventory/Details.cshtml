@@ -1,5 +1,26 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model DotNetCore_AutoLotDAL.Models.Inventory
+
 @{
+    var title = "Details";
+    ViewData["Title"] = title;
 }
+
+<h2>@title</h2>
+<div>
+    <h4>Inventory</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>@Html.DisplayNameFor(model => model.Make)</dt>
+        <dd>@Html.DisplayFor(model => model.Make)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.Color)</dt>
+        <dd>@Html.DisplayFor(model => model.Color)</dd>
+
+        <dt>@Html.DisplayNameFor(model => model.PetName)</dt>
+        <dd>@Html.DisplayFor(model => model.PetName)</dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Edit</a> |
+    <a asp-action="Index">Back to List</a>
+</div>
