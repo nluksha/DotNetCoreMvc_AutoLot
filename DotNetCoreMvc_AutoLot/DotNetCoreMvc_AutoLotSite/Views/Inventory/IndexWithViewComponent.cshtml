@@ -1,0 +1,22 @@
+﻿@using DotNetCore_AutoLotDAL.Models
+@model IEnumerable<Inventory>
+
+@functions
+{
+    public IList<Inventory> SortCars(IList<Inventory> cars)
+    {
+        var list = from s in cars orderby s.PetName select s;
+
+        return list.ToList();
+    }
+}
+
+@{ 
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<vc:inventory></vc:inventory>

@@ -21,7 +21,7 @@ namespace DotNetCoreMvc_AutoLotSite.Controllers
 
         public IActionResult Index()
         {
-            return View(repo.GetAll());
+            return View("IndexWithViewComponent");
         }
 
         public IActionResult Details(int? id)
