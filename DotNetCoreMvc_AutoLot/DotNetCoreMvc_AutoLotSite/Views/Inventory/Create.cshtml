@@ -1,5 +1,27 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
+﻿@model DotNetCore_AutoLotDAL.Models.Inventory
+
 @{
+    var title = "Create";
+    ViewData["Title"] = title;
+}
+
+<h2>@title</h2>
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            @Html.EditorForModel()
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts{
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }
